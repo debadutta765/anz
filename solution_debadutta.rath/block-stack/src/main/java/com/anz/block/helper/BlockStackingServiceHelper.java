@@ -43,7 +43,7 @@ public class BlockStackingServiceHelper {
 	 * @param blocks
 	 */
 	public static boolean validateBlocks(Block[] blocks) {
-		if(blocks.length < 1 || blocks.length > 100) {
+		if(blocks == null || blocks.length < 1 || blocks.length > 100) {
 			throw new BlockStackingServiceException(ErrorMsgs.INVALID_INPUT_LENGTH);
 		}
 		for(Block block:blocks) {
